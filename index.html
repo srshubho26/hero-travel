@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Travel</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Tailwind & DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        tailwind.config = {
+        content: ["*"],
+            theme: {
+                extend:{
+                    fontFamily: {
+                        'mulish': ["Mulish", "sans-serif"]
+                    },
+                    colors:{
+                        "main": "#FF5400",
+                        "title": "#131318",
+                        "desc": "#131318B3"
+                    },
+                    backgroundImage:{
+                        "banner": "linear-gradient(180.00deg, rgba(19, 19, 24, 0.8),rgba(19, 19, 24, 0) 100%), url('images/banner.png')",
+                        "dd1": "url('images/dd1.png')",
+                        "dd2": "url('images/dd2.png')",
+                        "arrow_down": "url('images/arrow_down.png')"
+                    }
+                }
+            
+        }
+        }
+    </script>
+</head>
+<body class="font-mulish">
+    <header class="max-w-screen-xl mx-auto px-2">
+        <nav class="navbar p-0 py-5 md:py-10">
+            <div class="navbar-start basis-[250px] sm:basis-auto">
+              <a href="#" class="flex items-center gap-2 sm:gap-5">
+                    <img src="Images/logo.png">
+                    <h3 class="text-title font-extrabold text-xl sm:text-4xl">Hero <span class="text-main">Travel</span></h3>
+                </a>
+            </div>
+
+            <div class="navbar-end ml-auto">
+                <ul class="menu menu-horizontal px-1 hidden lg:flex">
+                    <li><a class="text-lg text-main font-bold" href="#">Home</a></li>
+                    <li><a class="text-lg text-desc" href="#">Packages</a></li>
+                    <li><a class="text-lg text-desc" href="#">Testimonial</a></li>
+                    <li><a class="text-lg text-desc" href="#">Blog</a></li>
+                    <li><a class="text-lg text-desc" href="#">Contact</a></li>
+                </ul>
+
+                <div class="dropdown lg:hidden">
+                    <div tabindex="0" role="button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Packages</a></li>
+                      <li><a href="#">Testimonial</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </nav>
+
+        <!-- Banner section -->
+         <section class="bg-banner bg-no-repeat py-16 md:py-24 bg-center bg-cover rounded-lg">
+            <div class="max-w-[850px] mx-auto text-center px-2">
+                <h1 class="text-white text-4xl md:text-7xl font-bold">Explore Your Travel</h1>
+                <p class="text-base text-white my-8 sm:my-12 max-w-2xl mx-auto">Dolor sit amet consectetur. Nullam suspendisse vitae ultricies dolor adipiscing. In et odio enim ac quis sapien urna eu phasellus.</p>
+                <form class="grid sm:grid-cols-2 md:grid-cols-4 bg-[#FFFFFF4D] rounded-xl p-2 sm:p-4 gap-2 md:gap-6">
+                    <input type="text" placeholder="Where to go" class="p-4 sm:col-span-2 md:col-span-1 rounded-lg outline-none text-base text-[#13131880]">
+                    <select class="p-4 rounded-lg outline-none text-base text-[#13131880] bg-arrow_down bg-[right_8px_center] sm:bg-[right_16px_center] bg-no-repeat appearance-none">
+                        <option value="">When</option>
+                        <option value="">Today</option>
+                        <option value="">Tomorrow</option>
+                        <option value="">Any special day</option>
+                    </select>
+                    <select class="p-4 rounded-lg outline-none text-base text-[#13131880] bg-arrow_down bg-[right_8px_center] sm:bg-[right_16px_center] bg-no-repeat appearance-none">
+                        <option value="">Select Type</option>
+                        <option value="">Single</option>
+                        <option value="">Family</option>
+                        <option value="">Couple</option>
+                    </select>
+
+                    <button type="submit" class="bg-main sm:col-span-2 md:col-span-1 p-4 rounded-lg text-base font-bold text-white flex items-center gap-3 justify-center">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                        <span>Find Now</span>
+                    </button>
+                </form>
+            </div>
+         </section>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto px-2">
+        <section class="my-24 max-w-sm mx-auto md:max-w-full md:flex flex-row-reverse items-center xl:items-stretch">
+            <div class="basis-1/2 ">
+                <img class="w-full" src="Images/popular.png">
+            </div>
+
+            <div class="basis-1/2 md:pr-12 mt-6 md:mt-0 md:flex flex-col justify-between items-start">
+                <h2 class="text-title font-extrabold text-4xl mb-4 xl:mb-0">Our Popular Tours</h2>
+
+                <p class="text-base text-desc my-2 xl:my-0">Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+
+                <ul class="list-disc list-outside mx-3 px-3">
+                    <li class="my-2 xl:my-0 text-base text-desc">Tempus euismod lacus mauris dignissim quis in ultrices. Magna nullam odio neque diam. Sociis erat at.</li>
+                    <li class="my-2 xl:my-0 text-base text-desc">Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.</li>
+                    <li class="my-2 xl:my-0 text-base text-desc">Accumsan eget et turpis praesent lorem egestas enim elit bibendum. Risus at in.</li>
+                </ul>
+
+                <p class="text-base text-desc my-2 xl:my-0">Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet. Id bibendum nunc senectus semper tincidunt.</p>
+
+                <a href="#" class="font-extrabold text-white text-xl bg-main px-8 py-3 rounded-xl mt-4 xl:mt-0 inline-block">Read More</a>
+            </div>
+        </section>
+
+        <section class="my-24">
+            <div class="max-w-screen-sm mx-auto text-center">
+                <h2 class="text-title font-extrabold text-4xl mb-4">Choose Your Destination</h2>
+
+                <p class="text-base text-desc my-2">Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+            </div>
+
+            <div class="mt-12 grid sm:grid-cols-12 md:grid-rows-3 gap-3 max-w-sm mx-auto sm:max-w-full md:max-h-[95vh] overflow-hidden">
+                <div class="relative sm:col-span-6">
+                    <img class="w-full rounded-lg h-full object-cover" src="Images/other.png">
+                    <h3 class="text-3xl text-center w-full text-white font-extrabold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">Maldives</h3>
+                </div>
+                <div class="relative sm:col-span-6">
+                    <img class="w-full rounded-lg h-full object-cover" src="Images/indonesia.png">
+                    <h3 class="text-3xl text-center w-full text-white font-extrabold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">Indonesia</h3>
+                </div>
+                <div class="relative sm:col-span-4">
+                    <img class="w-full rounded-lg h-full object-cover" src="Images/srilanka.png">
+                    <h3 class="text-3xl text-center w-full text-white font-extrabold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">Srilanka</h3>
+                </div>
+                <div class="relative sm:col-span-5">
+                    <img class="w-full rounded-lg h-full object-cover" src="Images/north-america.png">
+                    <h3 class="text-3xl text-center w-full text-white font-extrabold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">North America</h3>
+                </div>
+                <div class="relative sm:col-span-3">
+                    <img class="w-full rounded-lg h-full object-cover" src="Images/kashmir.png">
+                    <h3 class="text-3xl text-center w-full text-white font-extrabold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">Kashmir</h3>
+                </div>
+                <div class="relative sm:col-span-5">
+                    <img class="w-full rounded-lg h-full object-cover" src="Images/bangladesh.png">
+                    <h3 class="text-3xl text-center w-full text-white font-extrabold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">Bangladesh</h3>
+                </div>
+                <div class="relative sm:col-span-7">
+                    <img class="w-full rounded-lg h-full object-cover" src="Images/bandarban.png">
+                    <h3 class="text-3xl text-center w-full text-white font-extrabold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">Bandarban</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-24">
+            <div class="max-w-screen-sm mx-auto text-center mb-12">
+                <h2 class="text-title font-extrabold text-4xl mb-4">Why Choose Us</h2>
+
+                <p class="text-base text-desc my-2">Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+            </div>
+
+            <div class="flex gap-6 flex-wrap justify-center">
+                <div class="bg-[#FBB5630D] border border-[#FBB56333] sm:basis-[calc(50%-12px)] rounded-lg p-5 md:p-8">
+                    <img src="Images/hotel.png">
+                    <h4 class="my-4 text-title font-extrabold text-2xl">Handpicked Hotels</h4>
+                    <p class="text-base text-desc">Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet.</p>
+                </div>
+
+                <div class="bg-[#29CEF60D] border border-[#29CEF633] sm:basis-[calc(50%-12px)] rounded-lg p-5 md:p-8">
+                    <img src="Images/map.png">
+                    <h4 class="my-4 text-title font-extrabold text-2xl">World Class Service</h4>
+                    <p class="text-base text-desc">Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet.</p>
+                </div>
+
+                <div class="bg-[#E944440D] border border-[#E9444433] sm:basis-[calc(50%-12px)] rounded-lg p-5 md:p-8">
+                    <img src="Images/tag.png">
+                    <h4 class="my-4 text-title font-extrabold text-2xl">Best Price Guarantee</h4>
+                    <p class="text-base text-desc">Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-24">
+            <div class="max-w-screen-sm mx-auto text-center mb-12">
+                <h2 class="text-title font-extrabold text-4xl mb-4">Deals & Discounts</h2>
+
+                <p class="text-base text-desc my-2">Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+            </div>
+
+            <div class="relative my-16 md:my-6 border border-stone-300 rounded-lg p-2 md:p-0 md:border-none">
+                <div>
+                    <img class="rounded-md w-full" src="Images/dd1.png">
+                </div>
+
+                <div class="border-2 border-white rounded-lg bg-[#FFFFFFCC] backdrop-blur-sm md:p-4 lg:p-12 md:absolute right-6 lg:right-14 top-1/2 md:w-[580px] md:-translate-y-1/2 mt-5 md:mt-0">
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 sm:gap-6 mb-3 lg:mb-6">
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-clock"></i>
+                            <span class="text-base text-desc">7 Day / 6 Night</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-users"></i>
+                            <span class="text-base text-desc">Max : 10</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-location-dot"></i>
+                            <span class="text-base text-desc">Malaysia</span>
+                        </p>
+                    </div>
+                    <h3 class="mb-3 lg:mb-6 font-extrabold text-title text-2xl">Tour To Satorini</h3>
+                    <p class="mb-3 lg:mb-6 text-base text-desc">Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing.</p>
+                    <h5 class="mb-3 lg:mb-6 text-xl font-extrabold text-main">Price: $1300-$1500</h5>
+                    <a href="#" class="font-extrabold text-white text-xl bg-main px-6 py-2 lg:py-3 rounded-lg inline-block">Book Now</a>
+                </div>
+            </div>
+            <div class="relative my-16 md:my-6 border border-stone-300 rounded-lg p-2 md:p-0 md:border-none">
+                <div>
+                    <img class="rounded-md w-full" src="Images/dd2.png">
+                </div>
+
+                <div class="border-2 border-white rounded-lg bg-[#FFFFFFCC] backdrop-blur-sm md:p-4 lg:p-12 md:absolute left-6 lg:left-14 top-1/2 md:w-[580px] md:-translate-y-1/2 mt-5 md:mt-0">
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 sm:gap-6 mb-3 lg:mb-6">
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-clock"></i>
+                            <span class="text-base text-desc">7 Day / 6 Night</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-users"></i>
+                            <span class="text-base text-desc">Max : 10</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-location-dot"></i>
+                            <span class="text-base text-desc">Malaysia</span>
+                        </p>
+                    </div>
+                    <h3 class="mb-3 lg:mb-6 font-extrabold text-title text-2xl">Tour To Satorini</h3>
+                    <p class="mb-3 lg:mb-6 text-base text-desc">Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing.</p>
+                    <h5 class="mb-3 lg:mb-6 text-xl font-extrabold text-main">Price: $1300-$1500</h5>
+                    <a href="#" class="font-extrabold text-white text-xl bg-main px-6 py-2 lg:py-3 rounded-lg inline-block">Book Now</a>
+                </div>
+            </div>
+            <div class="relative my-16 md:my-6 border border-stone-300 rounded-lg p-2 md:p-0 md:border-none">
+                <div>
+                    <img class="rounded-md w-full" src="Images/dd1.png">
+                </div>
+
+                <div class="border-2 border-white rounded-lg bg-[#FFFFFFCC] backdrop-blur-sm md:p-4 lg:p-12 md:absolute right-6 lg:right-14 top-1/2 md:w-[580px] md:-translate-y-1/2 mt-5 md:mt-0">
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 sm:gap-6 mb-3 lg:mb-6">
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-clock"></i>
+                            <span class="text-base text-desc">7 Day / 6 Night</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-users"></i>
+                            <span class="text-base text-desc">Max : 10</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="text-main text-xl fa-solid fa-location-dot"></i>
+                            <span class="text-base text-desc">Malaysia</span>
+                        </p>
+                    </div>
+                    <h3 class="mb-3 lg:mb-6 font-extrabold text-title text-2xl">Tour To Satorini</h3>
+                    <p class="mb-3 lg:mb-6 text-base text-desc">Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing.</p>
+                    <h5 class="mb-3 lg:mb-6 text-xl font-extrabold text-main">Price: $1300-$1500</h5>
+                    <a href="#" class="font-extrabold text-white text-xl bg-main px-6 py-2 lg:py-3 rounded-lg inline-block">Book Now</a>
+                </div>
+            </div>
+
+            <a href="#" class="font-extrabold text-white text-xl bg-main px-6 py-4 rounded-md mt-12 mx-auto w-fit block">See All Packages</a>
+        </section>
+
+        <section class="my-24">
+            <div class="max-w-screen-sm md:max-w-full mx-auto md:flex flex-row-reverse items-center lg:items-stretch">
+                <div class="basis-1/2">
+                    <img class="w-full rounded-lg" src="Images/simple.png">
+                </div>
+
+                <div class="mt-10 md:mt-0 basis-1/2 md:pr-7 lg:flex flex-col justify-between">
+                    <h2 class="text-title font-extrabold text-3xl lg:text-4xl xl:leading-[60px] mb-4">A Simple Perfect Place<br>To Get Lost</h2>
+    
+                    <p class="text-base text-desc my-2">Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis.</p>
+
+                    <ul class="list-disc list-inside px-2">
+                        <li class="text-title text-base font-bold my-3">Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.</li>
+                        <li class="text-title text-base font-bold my-3">Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.</li>
+                    </ul>
+
+                    <a href="#" class="font-extrabold text-white text-xl bg-main px-8 py-3 rounded-md mt-8 w-fit block">See More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-24">
+            <div class="max-w-screen-sm md:max-w-full mx-auto md:flex flex-row-reverse gap-3 lg:gap-6 items-center xl:items-stretch">
+                <div class="basis-3/5">
+                    <img class="w-full rounded-lg" src="Images/newsletter.png">
+                </div>
+
+                <div class="mt-10 md:mt-0 basis-2/5 border border-main rounded-xl p-4 lg:p-10 md:flex items-center">
+                    <div class="w-full">
+                        <h2 class="text-title font-extrabold text-3xl lg:text-4xl mb-4">Newsletter</h2>
+                        <p class="text-base text-desc max-w-[350px]">Get your daily dose of travel news & tips. Sign up today!</p>
+
+                        <form class="border-t border-[#1313181A] mt-6">
+                            <input class="my-6 block w-full px-5 py-4 outline-none bg-[#1313180D] text-base placeholder:text-[#1313184D] rounded-lg" type="text" placeholder="Enter your name">
+                            <input class="my-6 block w-full px-5 py-4 outline-none bg-[#1313180D] text-base placeholder:text-[#1313184D] rounded-lg" type="email" placeholder="Enter your email">
+                            <button type="submit" class="font-extrabold text-white text-xl bg-main px-8 py-3 rounded-md mt-6 block w-full">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer-center bg-[#1313180D] py-14 md:py-20 px-2">
+        <aside>
+            <a href="#" class="flex items-center gap-2 sm:gap-5">
+                <img src="Images/logo.png">
+                <h3 class="text-title font-extrabold text-4xl">Hero <span class="text-main">Travel</span></h3>
+            </a>
+
+          <p class="text-base text-[#5A5A5D] mt-8 max-w-screen-md mx-auto">Lorem ipsum dolor sit amet consectetur. Nulla sit viverra morbi vitae blandit orci potenti vulputate. Leo erat maecenas vitae elementum ultricies nullam.</p>
+        </aside>
+
+        <nav>
+          <div class="grid grid-flow-col gap-8">
+            <a href="#"><i class="text-2xl fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="text-2xl fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="text-2xl fa-brands fa-instagram"></i></i></a>
+            <a href="#"><i class="text-2xl fa-brands fa-github"></i></a>
+          </div>
+        </nav>
+
+        <p class="text-[#131318] text-base font-light border-t border-[#1313181A] w-full pt-12 max-w-[875px] mx-auto">2017, All Rights Reserved.</p>
+      </footer>
+</body>
+</html>
